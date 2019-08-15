@@ -9,7 +9,7 @@
 <div class="uper">
   @if(session()->get('success'))
     <div class="alert alert-success">
-      {{ session()->get('success') }}  
+      {{ session()->get('success') }}
     </div><br />
   @endif
 
@@ -22,10 +22,10 @@
         <tr>
           <td>Titulo</td>
           <td>Autor</td>
-          <td>Cantidad de Copias Disponibles</td>       
+          <td>Cantidad de Copias Disponibles</td>
         </tr>
     </thead>
-    
+
 
             <td><a href="{{ /add/{{ $book->id) }} ">Agregar a la Orden</a><td>
             <td><form method="post" action="{{ route('order.destroy', $book->id) }}" >

@@ -26,7 +26,7 @@ class ClientController extends Controller
      */
     public function create()
     {
-        return view('clients.create'); 
+        return view('clients.create');
     }
 
     /**
@@ -38,7 +38,7 @@ class ClientController extends Controller
     public function store(Request $request)
     {
           $client = Client::create($request->all());
-       return view('clients.index', compact('client'));
+      return redirect ('/cliente');
     }
 
     /**
@@ -64,7 +64,7 @@ class ClientController extends Controller
         $client = Client::findOrFail($id);
         return view('clients.edit', compact('client'));
     }
-    
+
 
     /**
      * Update the specified resource in storage.

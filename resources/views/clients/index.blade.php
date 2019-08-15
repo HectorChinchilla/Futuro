@@ -9,15 +9,15 @@
 <div class="uper">
   @if(session()->get('success'))
     <div class="alert alert-success">
-      {{ session()->get('success') }}  
+      {{ session()->get('success') }}
     </div><br />
   @endif
 
  <td><a href="{{ route('cliente.create') }}">New Client</a></td>
-
-  <table class="table table-striped">
+ <br><br><br>
+  <table class="table is-hoverable">
     <thead>
-      <h1>Clients List</h1>
+    <h4 class="title is-4">List Clients</h4>
         <tr>
           <td>Codigo</td>
           <td>FullName</td>
@@ -38,7 +38,7 @@
               <form method="post" action="{{ route('cliente.destroy', $client->id) }}" >
             @csrf
             @method('DELETE')
-            <input class="btn btn-danger" type="submit" value="Borrar">
+              <input class="button is-danger" type="submit" value="Borrar">
             </form>
           </td>
         </tr>

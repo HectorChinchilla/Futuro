@@ -2,49 +2,50 @@
 
 @section('content')
 
-  @if ($errors->any())
-      <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-              <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-      </div><br/>
-    @endif
 
-	<h1>Formulario New Client</h1>
-	<th><a href="{{ route('cliente.index') }}">Volver</a>
-	<br>
-	<br>
+
+ <h4 class="title is-4">Formulario New Client</h4>
+
+<th><a href="{{ route('cliente.index') }}">Volver</a>
+<br>
+<br>
+<div class="field">
+  <div class="control">
+
 <form method="post" action="{{ route('cliente.store')}}" >
 	@csrf
 	<label>Codigo:</label>
-	<input type="text" name="code" value="" placeholder="Codigo">
+	<input class="input is-rounded-input is-primary is-rounded" type="text" name="code">
 	<br>
 	<br>
-	<label>Fullname:</label>
-	<input type="text" name="fullname" value="" placeholder="Nombre">
+	<label>FullName:</label>
+	<input class="input is-primary is-medium solucion input is-rounded" type="text" name="fullname">
 	<br>
 	<br>
 	<label>Birthdate:</label>
-	<input type="date" name="birthdate" value="" placeholder="Birthdate">
+	<input class="input is-primary is-rounded" type="date" name="birthdate">
 	<br>
 	<br>
 	<label>Is_active:</label>
-	<input type="number" name="is_active" value="" placeholder="Estado">
+	<input class="input is-primary is-rounded" type="number" name="is_active">
 	<br>
 	<br>
-	<button>Guardar</button>
+	<div class="field is-grouped is-grouped-centered">
+  <p class="control">
+    <button class="button is-primary is-rounded">
+      Save
+    </a>
+  </p>
+  <p class="control">
+    <button class="button is-light is-rounded">
+      Cancel
+    </a>
+  </p>
+</div>
 	<br>
 	<br>
-	<button type="reset">Cancelar</button>
 </form>
+ </div>
+</div>
 
 @endsection
-
-
-
-
-
-
-

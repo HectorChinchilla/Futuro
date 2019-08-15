@@ -9,7 +9,7 @@
 <div class="uper">
   @if(session()->get('success'))
     <div class="alert alert-success">
-      {{ session()->get('success') }}  
+      {{ session()->get('success') }}
     </div><br />
   @endif
 
@@ -17,7 +17,7 @@
 <br><br><br>
   <table class="table is-hoverable">
     <thead>
-      <h4 class="title is-4">List Books</h4> 
+      <h4 class="title is-4">List Books</h4>
         <tr>
           <td>Titulo</td>
           <td>Autor</td>
@@ -27,7 +27,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach($book as $book)
+        @foreach($books as $book)
         <tr>
             <td>{{$book->title}}</td>
             <td>{{$book->author}}</td>

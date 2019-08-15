@@ -18,11 +18,11 @@
   <input type="text" name="fullname" placeholder="Nombre" value="{{ $client->fullname }}">
   <br>
   <br>
- 
-  <input type="text" name="birthdate" placeholder="FechaNacimiento" value="{{ $client->birthdate }}">
+
+  <input type="date" name="birthdate" placeholder="FechaNacimiento" value="{{ $client->birthdate }}">
   <br>
   <br>
-  
+
   <input type="text" name="is_active" placeholder="Estado" value=" {{ $client->is_active }} ">
   <br>
   <br>
